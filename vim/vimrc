@@ -1,0 +1,22 @@
+execute pathogen#infect()
+
+set nocompatible
+syntax on
+set number
+set numberwidth=5
+set laststatus=2
+
+filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FORGET ABOUT ARROW KEYS 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" POWERLINE SETTINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Powerline_symbols = 'fancy'

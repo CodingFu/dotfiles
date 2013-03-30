@@ -16,3 +16,5 @@ autoload compinit
 compinit
 
 PATH=$PATH:$HOME/.rvm/bin:/usr/local/sbin 
+
+alias vimrc="vim $HOME/.vimrc"
