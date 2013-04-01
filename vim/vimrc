@@ -1,12 +1,29 @@
 execute pathogen#infect()
 
 set nocompatible
-syntax on
-set number
+syntax enable
+colorscheme topfunky-light
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+filetype plugin indent on
+
+set nobackup
+set nowritebackup
+set directory=$HOME/.vim/tmp//,.
+
+set relativenumber
 set numberwidth=5
 set laststatus=2
 
-filetype plugin indent on
+set ignorecase
+set smartcase
+
+set incsearch
+set hlsearch
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORGET ABOUT ARROW KEYS 
@@ -20,3 +37,9 @@ map <Down> <Nop>
 " POWERLINE SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:Powerline_symbols = 'fancy'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Switching between numbers and relative numbers 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
