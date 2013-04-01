@@ -2,7 +2,10 @@ execute pathogen#infect()
 
 set nocompatible
 syntax enable
-colorscheme topfunky-light
+set background=light
+let g:solarized_termcolors=16
+"let g:solarized_termtrans=1
+colorscheme solarized
 
 set tabstop=2
 set shiftwidth=2
@@ -24,6 +27,7 @@ set smartcase
 set incsearch
 set hlsearch
 
+set clipboard=unnamed "yank to clipboard
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORGET ABOUT ARROW KEYS 
