@@ -4,7 +4,6 @@ set nocompatible
 syntax enable
 set background=light
 let g:solarized_termcolors=16
-"let g:solarized_termtrans=1
 colorscheme solarized
 
 set tabstop=2
@@ -27,8 +26,6 @@ set smartcase
 set incsearch
 set hlsearch
 
-set clipboard=unnamed "yank to clipboard
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORGET ABOUT ARROW KEYS 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -47,3 +44,8 @@ let g:Powerline_symbols = 'fancy'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap <c-s> <Esc>:w<CR>
