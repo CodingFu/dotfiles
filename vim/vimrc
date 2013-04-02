@@ -2,9 +2,11 @@ execute pathogen#infect()
 
 set nocompatible
 syntax enable
-set background=light
+set background=dark
 let g:solarized_termcolors=16
 colorscheme solarized
+highlight SignColumn ctermbg=0
+set colorcolumn=80
 
 set tabstop=2
 set shiftwidth=2

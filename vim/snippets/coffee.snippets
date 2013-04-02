@@ -1,0 +1,27 @@
+snippet if
+	if ${1:true}
+		${2}
+# describe
+snippet desc
+	describe "${1:something}", ->
+		${2}
+# it
+snippet it
+	it "${1:works}", (done) ->
+		${2}
+		done()
+# before
+snippet bf
+	before (done) ->
+		${1}
+		done()
+	
+# before all
+snippet bfa
+	beforeAll (done) ->
+		${1}
+		done()
+
+# console.log
+snippet log
+	console.log ${1}

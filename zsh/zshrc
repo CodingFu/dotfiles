@@ -16,11 +16,26 @@ autoload compinit
 compinit
 
 PATH=$PATH:$HOME/.rvm/bin:/usr/local/sbin 
+export SIS_BUILD='dev9999'
+
+# Quick jumps
+alias csj="cd $HOME/src/sis/sis-js"
+alias csa="cd $HOME/src/sis/app"
+alias csv="cd $HOME/src/sis/sis-views"
+alias cuw="cd $HOME/src/umbrella/apps/web"
+alias cuc="cd $HOME/src/umbrella/apps/client_api"
+alias cud="cd $HOME/src/umbrella/apps/device_api"
+alias cu="cd $HOME/src/umbrella"
 
 alias l="ls -la"
+alias ru="rvm use"
 alias vimrc="vim $HOME/.vimrc"
 alias zshrc="vim $HOME/.zshrc"
 alias szs="source $HOME/.zshrc"
+
+alias ssup="sis server start -d -P"
+alias ssdown="sis server stop -d"
+
 alias gst="git status"
 alias gcm="git commit -am"
 alias gpl="git pull"
