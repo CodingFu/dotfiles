@@ -1,4 +1,3 @@
-" Maintainer: paddynewman@gmail.com
 " License: BSD
 
 if &t_Co != 256 && !has("gui_running")

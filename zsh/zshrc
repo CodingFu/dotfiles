@@ -16,7 +16,7 @@ autoload compinit
 compinit
 
 PATH=$PATH:$HOME/.rvm/bin:/usr/local/sbin 
-export SIS_BUILD='dev9999'
+export SIS_BUILD='dev.9999'
 
 # Quick jumps
 alias csj="cd $HOME/src/sis/sis-js"
