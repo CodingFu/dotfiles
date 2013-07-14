@@ -9,14 +9,22 @@ PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
 
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/bin/git-cwd-info)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/.bin/git-cwd-info)%{$reset_color%}'
 
 setopt menucomplete
 autoload compinit
 compinit
 
 PATH=$PATH:$HOME/.rvm/bin:/usr/local/sbin 
-export SIS_BUILD='dev.9999'
+export EDITOR="vim"
+export SIS_BUILD='dev.999999'
+
+# Aliases
+
+alias r="bundle exec rails"
+alias z="zeus"
+alias g="git"
+alias rk="bundle exec rake"
 
 # Quick jumps
 alias csj="cd $HOME/src/sis/sis-js"
@@ -43,3 +51,5 @@ alias gst="git status"
 alias gcm="git commit -am"
 alias gpl="git pull"
 alias gps="git push"
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

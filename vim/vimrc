@@ -4,10 +4,10 @@ set nocompatible
 set noswapfile
 
 syntax enable
-set t_Co=256
-set background=light
+set background=dark
+colorscheme hemisu
+
 let g:solarized_termcolors=16
-colorscheme solarized
 highlight SignColumn ctermbg=0
 set colorcolumn=80
 
@@ -31,6 +31,8 @@ set smartcase
 set incsearch
 set hlsearch
 
+set iskeyword-=_ "for ruby
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORGET ABOUT ARROW KEYS 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -38,6 +40,14 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FORGET ABOUT ARROW KEYS 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Handy stuff
@@ -64,6 +74,11 @@ let g:Powerline_symbols = 'fancy'
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\vnode_modules$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
   \ }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ACK
