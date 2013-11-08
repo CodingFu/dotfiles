@@ -4,8 +4,9 @@ set nocompatible
 set noswapfile
 
 syntax enable
-set background=dark
-colorscheme hemisu
+set background=light
+set t_Co=256 "256 colors
+colorscheme github
 
 let g:solarized_termcolors=16
 highlight SignColumn ctermbg=0
@@ -31,7 +32,12 @@ set smartcase
 set incsearch
 set hlsearch
 
-set iskeyword-=_ "for ruby
+set backspace=2
+" set iskeyword-=_ "for ruby
+
+" correct splits
+set splitright
+set splitbelow
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORGET ABOUT ARROW KEYS 
@@ -42,7 +48,7 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FORGET ABOUT ARROW KEYS 
+" HANDY WINDOW NAVIGATION 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-J> <C-W>j
 map <C-K> <C-W>k
@@ -52,6 +58,10 @@ map <C-L> <C-W>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Handy stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"save
+
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
 
 " Move to last position when reopening a file
 if has("autocmd")
@@ -62,11 +72,13 @@ endif
 " Better indent / outdent
 vmap < <gv
 vmap > >gv
+
+" toggle autoindent
+:nnoremap <F8> :setl noai nocin nosi inde=<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " POWERLINE SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:Powerline_symbols = 'fancy'
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTRL-P
@@ -84,3 +96,12 @@ let g:ctrlp_custom_ignore = {
 " ACK
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ackprg="ack -H --nocolor --nogroup --column"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CTAGS autoregenerate
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufWritePost *
+      \ if filereadable('tags') |
+      \   call system('ctags -a '.expand('%')) |
+      \ endif

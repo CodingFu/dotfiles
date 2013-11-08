@@ -9,15 +9,12 @@ PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
 
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/.bin/git-cwd-info)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(~/.bin/git-cwd-info)%{$reset_color%}'
 
 setopt menucomplete
 autoload compinit
 compinit
-
-PATH=$PATH:$HOME/.rvm/bin:/usr/local/sbin 
 export EDITOR="vim"
-export SIS_BUILD='dev.999999'
 
 # Aliases
 
@@ -25,15 +22,6 @@ alias r="bundle exec rails"
 alias z="zeus"
 alias g="git"
 alias rk="bundle exec rake"
-
-# Quick jumps
-alias csj="cd $HOME/src/sis/sis-js"
-alias csa="cd $HOME/src/sis/app"
-alias csv="cd $HOME/src/sis/sis-views"
-alias cuw="cd $HOME/src/umbrella/apps/web"
-alias cuc="cd $HOME/src/umbrella/apps/client_api"
-alias cud="cd $HOME/src/umbrella/apps/device_api"
-alias cu="cd $HOME/src/umbrella"
 
 alias ccat="pygmentize -g"
 alias ls="ls -G"
@@ -52,4 +40,15 @@ alias gcm="git commit -am"
 alias gpl="git pull"
 alias gps="git push"
 
+alias cap="bundle exec cap"
+
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+export NLS_KEY_PWD=test
+
+stty -ixon -ixoff
+
+# rbenv
+export RBENV_ROOT="$(brew --prefix rbenv)"
+export GEM_HOME="$(brew --prefix)/opt/gems"
+export GEM_PATH="$(brew --prefix)/opt/gems"
+export PATH=$RBENV_ROOT/bin:$RBENV_ROOT/shims:/usr/local/bin:$PATH
