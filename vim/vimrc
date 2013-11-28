@@ -60,8 +60,8 @@ map <C-L> <C-W>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "save
 
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
+nmap <C-S> :w<CR>
+inoremap <C-S> <Esc>:w<CR>
 
 " Move to last position when reopening a file
 if has("autocmd")
@@ -88,7 +88,7 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
   \ }
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\vnode_modules$',
+  \ 'dir':  '\v(node_modules|ui/public/js)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
@@ -96,7 +96,6 @@ let g:ctrlp_custom_ignore = {
 " ACK
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ackprg="ack -H --nocolor --nogroup --column"
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTAGS autoregenerate

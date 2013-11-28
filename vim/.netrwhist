@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/wckd/src'
-let g:netrw_dirhist_2='/Users/wckd/src/be-worthwhile/config/deploy'
-let g:netrw_dirhist_3='/Users/wckd/src/be-worthwhile/config'
-let g:netrw_dirhist_4='/Users/wckd/.lolcommits/test'
-let g:netrw_dirhist_5='/Users/wckd/src/play/node-lolcommit/node_modules'
-let g:netrw_dirhist_6='/Users/wckd/src/play/node-lolcommit'
-let g:netrw_dirhist_7='/Users/wckd/.lolcommits/mission-control'
-let g:netrw_dirhist_8='/Users/wckd/.lolcommits'
-let g:netrw_dirhist_9='/Users/wckd/.lolcommits/mission-control'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/wckd/src/ihd-2'
+let g:netrw_dirhist_2='/Users/wckd/src/ihd-2/measure_creation'
+let g:netrw_dirhist_3='/Users/wckd/src/dotfiles/vim'
+let g:netrw_dirhist_4='/Users/wckd/src/dotfiles/vim/bundle'
