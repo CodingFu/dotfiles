@@ -52,3 +52,7 @@ export RBENV_ROOT="$(brew --prefix rbenv)"
 export GEM_HOME="$(brew --prefix)/opt/gems"
 export GEM_PATH="$(brew --prefix)/opt/gems"
 export PATH=$RBENV_ROOT/bin:$RBENV_ROOT/shims:/usr/local/bin:$PATH
+
+# tmuxifier
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
