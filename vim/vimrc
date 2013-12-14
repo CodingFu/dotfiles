@@ -39,6 +39,18 @@ set backspace=2
 set splitright
 set splitbelow
 
+" leader
+let mapleader="\\"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LEADER MAPPINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" splits
+noremap <Leader>t :tabe<CR>
+noremap <Leader>v :vsplit<CR>
+noremap <Leader>s :split<CR>
+noremap <Leader>a :Ack
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORGET ABOUT ARROW KEYS 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,11 +70,6 @@ map <C-L> <C-W>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Handy stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"save
-
-nmap <C-S> :w<CR>
-inoremap <C-S> <Esc>:w<CR>
-
 " Move to last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -83,10 +90,6 @@ let g:Powerline_symbols = 'fancy'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTRL-P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': [],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-  \ }
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v(node_modules|ui/public/js)$',
   \ 'file': '\v\.(exe|so|dll)$',
