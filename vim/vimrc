@@ -4,13 +4,12 @@ set nocompatible
 set noswapfile
 
 syntax enable
-set background=light
+set background=dark
 set t_Co=256 "256 colors
-colorscheme github
+colorscheme grb256
 
-let g:solarized_termcolors=16
-highlight SignColumn ctermbg=0
 set colorcolumn=80
+highlight ColorColumn ctermbg=0
 
 set tabstop=2
 set shiftwidth=2
@@ -49,7 +48,8 @@ let mapleader="\\"
 noremap <Leader>t :tabe<CR>
 noremap <Leader>v :vsplit<CR>
 noremap <Leader>s :split<CR>
-noremap <Leader>a :Ack
+noremap <Leader>a :Ack 
+noremap <Leader>e :Vexplore<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORGET ABOUT ARROW KEYS 

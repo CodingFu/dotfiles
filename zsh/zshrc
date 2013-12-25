@@ -39,6 +39,7 @@ alias gst="git status"
 alias gcm="git commit -am"
 alias gpl="git pull"
 alias gps="git push"
+alias gdiff="git diff --color"
 
 alias cap="bundle exec cap"
 

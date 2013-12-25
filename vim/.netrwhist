@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/wckd/src/ihd-2'
-let g:netrw_dirhist_2='/Users/wckd/src/ihd-2/measure_creation'
-let g:netrw_dirhist_3='/Users/wckd/src/dotfiles/vim'
-let g:netrw_dirhist_4='/Users/wckd/src/dotfiles/vim/bundle'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/wckd/src/ihd-2/ui/public/sass/components'
+let g:netrw_dirhist_2='/Users/wckd/src/ihd-2/ui/public/sass'
+let g:netrw_dirhist_3='/Users/wckd/src/ihd-2/ui/public'
+let g:netrw_dirhist_4='/Users/wckd/src/ihd-2/ui'
+let g:netrw_dirhist_5='/Users/wckd/src/ihd-2'
+let g:netrw_dirhist_6='/Users/wckd/src/ihd-2/ui/public/sass/components'
+let g:netrw_dirhist_7='ui/public/sass'
