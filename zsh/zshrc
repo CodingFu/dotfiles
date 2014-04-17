@@ -19,9 +19,10 @@ export EDITOR="vim"
 # Aliases
 
 alias r="bundle exec rails"
-alias z="zeus"
+alias z="bundle exec zeus"
 alias g="git"
 alias rk="bundle exec rake"
+alias be="bundle exec"
 
 alias ccat="pygmentize -g"
 alias ls="ls -G"
@@ -48,12 +49,17 @@ export NLS_KEY_PWD=test
 
 stty -ixon -ixoff
 
-# rbenv
-export RBENV_ROOT="$(brew --prefix rbenv)"
-export GEM_HOME="$(brew --prefix)/opt/gems"
-export GEM_PATH="$(brew --prefix)/opt/gems"
-export PATH=$RBENV_ROOT/bin:$RBENV_ROOT/shims:/usr/local/bin:$PATH
 
+export GOPATH=$HOME/.gocode
+export PATH=$GOPATH/bin:$PATH
 # tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.tmuxifier/bin:/usr/local/bin:$PATH"
 eval "$(tmuxifier init -)"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+eval "$(direnv hook zsh)"
+
+
+BASE16_SCHEME="tomorrow"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
