@@ -1,8 +1,11 @@
 set relativenumber
 set number
 
-" C-S is save
-" " Note that remapping C-s requires flow control to be disabled
-" " (e.g. in .bashrc or .zshrc)
-" map <C-s> <esc>:w<CR>
-" imap <C-s> <esc>:w<CR>
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" Color scheme
+colorscheme github
+highlight NonText guibg=#060606
+highlight Folded  guibg=#0A0A0A guifg=#9090D0

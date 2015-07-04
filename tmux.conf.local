@@ -10,6 +10,7 @@ bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 bind-key | split-window -h
 bind-key - split-window
 
+
 # increase scroll-back history
 set -g history-limit 5000
 

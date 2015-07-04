@@ -1,2 +1,5 @@
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
+Plug 'ngmy/vim-rubocop'
+Plug 'mileszs/ack.vim'
+Plug 'croaky/vim-colors-github'
