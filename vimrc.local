@@ -5,6 +5,8 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+let g:rspec_command = '!bin/rspec {spec}'
+
 " Color scheme
 colorscheme github
 highlight NonText guibg=#060606
