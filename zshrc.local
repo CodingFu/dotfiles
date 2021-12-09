@@ -21,13 +21,10 @@ alias m="migrate && RAILS_ENV=test rake db:migrate"
 alias rc="rubocop -a \`git diff-tree --no-commit-id --name-only -r\`"
 alias gcm="git commit -m"
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 export VAULT_AUTH_GITHUB_TOKEN=
 export ANDROID_SDK=/Users/work/Library/Android/sdk
 export PATH=/Users/work/Library/Android/sdk/platform-tools:$PATH
-export RUBYOPT="-W:no-deprecated -W:no-experimental"
+#export RUBYOPT="-W:no-deprecated -W:no-experimental"
 
 export SPACESHIP_PACKAGE_SHOW=false
 export SPACESHIP_NODE_SHOW=false

@@ -1,6 +1,7 @@
 set relativenumber
 set number
-set rtp+=~/tabnine-vim
+
+set rtp+=/Users/seva/Downloads/tabnine-vim-master
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -17,26 +18,26 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " Just type %% to get current directory!
 cnoremap <expr> %% getcmdtype() ==# ':' ? fnameescape(expand('%:h')) . '/' : '%%'
 
-let g:ale_set_highlights = 0
+let g:ale_set_highlights = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
-\   'ruby': ['rubocop'],
+\   'ruby': ['rubocop', 'reek'],
+\}
+let g:ale_linters = {
+\   'javascript': ['prettier'],
+\   'ruby': ['rubocop', 'reek'],
 \}
 nnoremap <leader>f :ALEFix<CR>
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
-let g:ale_sign_error = '💣'
-let g:ale_sign_warning = '⚠'
 
 " Add some info to status line
 
 " Color scheme
-colorscheme github
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
+colorscheme gruvbox
+let g:gruvbox_italic = 0
+let g:gruvbox_contrast_dark = 'medium'
 highlight CursorLineNr ctermfg=NONE
 "
 " set background=dark
@@ -59,3 +60,10 @@ highlight CursorLineNr ctermfg=NONE
 " highlight Pmenu        ctermbg=240 ctermfg=12
 " highlight PmenuSel     ctermbg=3   ctermfg=1
 " highlight SpellBad     ctermbg=0   ctermfg=1
+
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
