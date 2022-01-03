@@ -1,4 +1,3 @@
-set relativenumber
 set number
 
 set rtp+=/Users/seva/Downloads/tabnine-vim-master
@@ -18,6 +17,9 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 " Just type %% to get current directory!
 cnoremap <expr> %% getcmdtype() ==# ':' ? fnameescape(expand('%:h')) . '/' : '%%'
 
+"""""""""""""""""""""""""""""
+" Ale configuration (legacy)
+""""""""""""""""""""""""""""
 let g:ale_set_highlights = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
@@ -32,13 +34,26 @@ let g:ale_linters = {
 \}
 nnoremap <leader>f :ALEFix<CR>
 
-" Add some info to status line
+""""""""""""""""""""""""""""""""""
+" VIM TOMATO
+""""""""""""""""""""""""""""""""""
+let g:tomato#show_clock=1
+let g:tomato#show_count_down=1
 
+""""""""""""""""""""""""""""""""""
 " Color scheme
-colorscheme gruvbox
-let g:gruvbox_italic = 0
-let g:gruvbox_contrast_dark = 'medium'
+"""""""""""""""""""""""""""""""""
+
+" colorscheme gruvbox
+" let g:gruvbox_italic = 0
+" let g:gruvbox_contrast_dark = 'medium'
+
+set background=dark
+colorscheme grb256
 highlight CursorLineNr ctermfg=NONE
+highlight Pmenu ctermbg=gray guibg=gray ctermfg=black guifg=black
+highlight VertSplit cterm=NONE
+
 "
 " set background=dark
 " colorscheme base16-mocha
@@ -61,8 +76,9 @@ highlight CursorLineNr ctermfg=NONE
 " highlight PmenuSel     ctermbg=3   ctermfg=1
 " highlight SpellBad     ctermbg=0   ctermfg=1
 
-
+"""""""""""""""""""""""""""""""
 " airline symbols
+" """""""""""""""""""""""""""""
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''

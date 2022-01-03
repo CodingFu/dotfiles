@@ -24,7 +24,6 @@ alias gcm="git commit -m"
 export VAULT_AUTH_GITHUB_TOKEN=
 export ANDROID_SDK=/Users/work/Library/Android/sdk
 export PATH=/Users/work/Library/Android/sdk/platform-tools:$PATH
-#export RUBYOPT="-W:no-deprecated -W:no-experimental"
 
 export SPACESHIP_PACKAGE_SHOW=false
 export SPACESHIP_NODE_SHOW=false

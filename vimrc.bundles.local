@@ -17,3 +17,4 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'morhetz/gruvbox'
 Plug 'codota/tabnine-vim'
 Plug 'pedrohdz/vim-yaml-folds'
+Plug 'johnantoni/grb256'
