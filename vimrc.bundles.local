@@ -15,6 +15,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'sfger/vim-eslint'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'morhetz/gruvbox'
-Plug 'codota/tabnine-vim'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'johnantoni/grb256'
+Plug 'tabnine/YouCompleteMe'
+Plug 'mattn/emmet-vim'
+

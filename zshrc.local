@@ -21,6 +21,16 @@ alias m="migrate && RAILS_ENV=test rake db:migrate"
 alias rc="rubocop -a \`git diff-tree --no-commit-id --name-only -r\`"
 alias gcm="git commit -m"
 
+alias hh="npx hardhat"
+alias hhc="npx hardhat compile"
+alias hhsc="npx hardhat size-contracts"
+alias hhcs="npx hardhat size-contracts"
+alias hht="npx hardhat test"
+alias hhr="npx hardhat run"
+alias hhv="npx hardhat verify"
+
+alias chatgpt="docker run --platform linux/amd64 -v $(pwd)/data:/app/data -p 3000:3000 ghcr.io/cogentapps/chat-with-gpt:release"
+
 export VAULT_AUTH_GITHUB_TOKEN=
 export ANDROID_SDK=/Users/work/Library/Android/sdk
 export PATH=/Users/work/Library/Android/sdk/platform-tools:$PATH
